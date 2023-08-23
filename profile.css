@@ -1,0 +1,383 @@
+:root {
+  --avatar-size: 180px;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  text-align: justify;
+  background: #FFF;
+}
+
+.container {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+  margin: 40px 120px 142px 120px;
+}
+
+/* SIDEBAR */
+@media screen and (min-width: 900px) {
+  .wraper {
+    padding-top: 30px;
+    position: sticky;
+    top: 0;
+    overflow: auto;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 15px 50px 0px rgba(44, 125, 192, 0.15);
+  }
+}
+
+.sidebar {
+  max-width: 260px;
+  padding-top: calc(var(--avatar-size)/2);
+}
+
+.col-sidebar .avatar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(var(--avatar-size)/2);
+  overflow: visible;
+}
+.col-sidebar .avatar > svg {
+  position: absolute;
+  top: 0;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  overflow: visible;
+  z-index: 1;
+}
+
+.sidebar .name {
+  margin-top: 24px;
+  text-align: center;
+  color: #222B63;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.sidebar .role {
+  display: flex;
+  justify-content: center;
+  margin: 13px 26px 19px 26px;
+}
+.sidebar .role-name {
+  width: 208px;
+  background: #DDEFF8;
+  border-radius: 15px;
+  text-align: center;
+  padding: 6px 0px 7px 0px;
+}
+
+.sidebar .social {
+  margin: 16px 0 19px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px
+}
+
+.sidebar .info {
+  padding: 17px 20px 19px 20px;
+  background: #F1F7FB;
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+.sidebar .info > div {
+  display: flex;
+  align-items: center;
+  gap: 14px
+}
+.sidebar .info > div > span,
+svg {
+  font-size: 14px;
+}
+
+.sidebar .download {
+  display: flex;
+  justify-content: center;
+  background: #F1F7FB;
+  padding-bottom: 20px;
+}
+
+.sidebar .download > button {
+  border-radius: 16px;
+  font-size: 16px;
+  background: #222B63;
+  color: #FFF;
+  font-family: Noto Sans JP;
+  font-weight: 700;
+  padding: 12px 15px 13px 15px;
+  width: 182px;
+}
+
+/* INFOMATION */
+.infomation {
+  max-width: 900px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 0px 6px 3px #CCE6FC;
+  overflow: auto;
+}
+
+.infomation > section {
+  padding: 24px 30px 50px 30px;
+  border-bottom: 1px solid #2C7DC0;
+}
+
+.infomation > section:last-child {
+  border-bottom: 0px
+}
+
+section > .title {
+  margin-bottom: 30px;
+}
+
+section > .title > span {
+  color: #222B63;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.infomation .about-me {
+  padding-bottom: 40px;
+}
+
+.skill .skill-frame .row {
+  display: flex;
+}
+.skill .frame {
+  width: 100%;
+}
+.skill .frame:not(:nth-child(2n)) {
+  margin-right: 40px;
+}
+
+.skill .frame .frame-title {
+  display: flex;
+  justify-content:space-between;
+}
+.skill .frame .process {
+  height: 12px;
+  border-radius: 22px;
+  background: #CCE6FC;
+  margin-bottom: 30px;
+}
+
+.skill .frame .process .bar {
+  border-radius: 22px;
+  background: #2C7DC0;
+  height: 12px;
+}
+
+.skill .frame span {
+  color: #2C7DC0;
+  font-weight: 400;
+}
+
+.skill .frame .process .html,
+.skill .frame .process .bootstrap, 
+.skill .frame .process .javascript,
+.skill .frame .process .sass, 
+.skill .frame .process .css {
+  width: var(--percent);
+}
+
+section .content .info {
+  padding: 17px 20px 19px 20px;
+  background: #F1F7FB;
+  border-radius: 4px;
+  border-left: 2px solid #2C7DC0;
+  box-shadow: 0px 0px 6px 3px rgba(44, 125, 192, 0.13);
+}
+section .content > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+section .content .info p>span:first-child {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+section .content .info p > span:last-child {
+  color: #6C6C6C;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+section .content .info .time {
+  color: #6C6C6C;
+  font-weight: 500;
+}
+
+/* FORM CONTACT */
+.form {
+  margin-top: 50px;
+  border-radius: 10px;
+  background: #2C7DC0;
+  padding: 24px 30px 50px 30px;
+}
+
+.form .title > span {
+  color: #FFF;
+}
+
+.form-items > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #FFF;
+}
+.form-items .item-info {
+  display: flex;
+  gap: 40px;
+
+}
+.form-items .item-info .full-name, 
+.form-items .item-info .email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-items .item-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-items input,
+.form-items textarea {
+  border: 0px;
+  height: 20px;
+  padding: 15px 16px 15px 16px;
+  border-radius: 6px;
+  background: #FFF;
+  margin-top: 12px;
+  color: #2C7DC0;
+}
+
+.form-items textarea {
+  height: 68px;
+  resize: none;
+}
+
+.item-button {
+  text-align: center;
+}
+
+.item-button > button {
+  padding: 0;
+  border: 0;
+  width: 230px;
+  padding: 18px 15px 18px 15px;
+  color: #2C7DC0;
+  text-align: center;
+  font-family: Noto Sans JP;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  border-radius: 10px;
+  background: #FFF;
+  margin-top: 10px;
+}
+
+
+/* FOR MOBILE */
+@media screen and (max-width: 900px) {
+  .container {
+    display: block;
+    margin: 40px 30px 40px 30px;
+  }
+  .sidebar {
+    max-width: 100%;
+  }
+  .sidebar {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 15px 50px 0px rgba(44, 125, 192, 0.15);
+  }
+  .sidebar .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .sidebar .download > button {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+  .sidebar {
+    max-width: 100%;
+  }
+  .sidebar .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 14px
+  }
+  
+  .item-button > button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  :root {
+    --avatar-size: 120px;
+  }
+  body {
+    font-size: 14px;
+  }
+  .container {
+    display: block;
+  }
+  .col-sidebar {
+    max-width: 100%;
+  }
+  .sidebar .role-name {
+    font-size: 16px;
+  }
+  .sidebar .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .title > span {
+    font-size: 24px;
+  }
+  p>span:first-child {
+    font-size: 18px;
+  }
+  
+  p>span:last-child {
+    font-size: 16px;
+  }
+
+  .frame {
+    width: 100%;
+  }
+  .skill-frame .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .infomation > section {
+    padding: 30px 20px 40px 20px;
+  }
+  .form-items .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .item-button > button {
+    width: 100%;
+  }
+}
